@@ -106,10 +106,12 @@ def reformat_languages(languages)
 
   languages.each do |style, lang_names|
     lang_names.each do |lang_name, lang_type|
-      new_hash[lang_name] = lang_type
+      if new_hash[lang_name] == nil
+        new_hash[lang_name] = lang_type
+      end
       if new_hash[lang_name][:style] == nil
           new_hash[lang_name][:style] = []
-          binding.pry
+          # binding.pry
       end
       new_hash[lang_name][:style] << style
     end
