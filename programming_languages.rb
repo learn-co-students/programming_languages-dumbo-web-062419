@@ -6,9 +6,9 @@ def reformat_languages(languages)
   languages.each do |styles, values|
     #binding.pry
     values.each do |langs, attributes|
-      #binding.pry
+      binding.pry
       if new_hash[langs]
-binding.pry
+#binding.pry
       else
         new_hash[langs] = attributes
       end
